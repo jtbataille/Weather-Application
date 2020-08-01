@@ -1,47 +1,19 @@
-# 06 Server-Side APIs: Weather Dashboard
+## Weather Application
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+In this application, a user can search for a city (with a country tag for added specificity [IT, DE, US, etc.]) and receive the current weather for that locality. Moreover, the user will be provided with a 5-Day Forecast below the current day of upcoming weather.
 
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
+# First Usage:
+Upon opening the application, the user will see a Search Box wherein s/he will introduce the desired location to see the weather, which will bring up two things: the current day and the 5-Day Forecast.
 
-## User Story
+In the current day view, the user can see his/her selected location, including City, Country, as well as the current date (dynamically updated with moment.js), and the icon portraying the weather for that day, updated based on the weather forecasted for 3 PM each day. Below this, the user will see the Temperature in Celsius, the percentage of Humidity, the current Wind Speed in meter(s) per second, and the UV Index. This UV Index is dynamically called based on the user's inputed location, and it will update its color based on the UV Index (green = good, yellow = OK, orange = be weary, red = bad, purple = stay inside).
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+In the 5-Day Forecast, the user will see five cards containing the day associated with that weather forecast, the icon/picture for that day's weather, the Temperature in Celsius, and the Humidity for that day.
 
-## Acceptance Criteria
+# Continued Usage:
+As everything is saved to the Local Storage, the user's past search results are kept in the lefthand column under the Search Input. While each new search will re-write what the user sees to the right (the current day and the 5-Day Forecast), the user may simply click the past searches to retrieve those results and see them again instead of re-typing the search, even upon page re-load.
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-```
+## Deployed Website Link:
+https://jtbataille.github.io/Weather-Application/
 
-The following image demonstrates the application functionality:
-
-![weather dashboard demo](./assets/06-server-side-apis-homework-demo.png)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-# WeatherAppHW6
+## Application Demo:
+![Weather Dashboard](https://user-images.githubusercontent.com/65187093/89108808-889ce800-d409-11ea-892d-201d936b0440.gif)
