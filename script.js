@@ -51,7 +51,7 @@ $(document).ready(function() {
         cardHeader.append(icon);
 
         var temp = (data.main.temp - 273.15);
-        var pTemp = $("<p>").addClass("pl-2 pt-2").text("Temperature: " + temp.toFixed(2) + "°C");
+        var pTemp = $("<p>").addClass("pl-2 pt-2").text("Temperature: " + temp.toFixed(2) + " °C");
         cardBodyDiv.append(pTemp);
 
         var humidity = (data.main.humidity);
@@ -84,12 +84,23 @@ $(document).ready(function() {
         $("day3Card").empty();
         $("day4Card").empty();
         $("day5Card").empty();
+        
         // loop over all forecasts (by 3-hour increments)
         for (var i = 0; i < data.list.length; i++) {
           // only look at forecasts around 3:00pm
           if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
             // create html elements for a bootstrap card
-            $("#forecast").append($("<h4>").text("Five-Day Forecast:"));
+            $("#forecast").append($("<h4>").addClass("pb-3").text("Five-Day Forecast:"));
+
+            var forecastRow = $("<section>").addClass("row fiveDayForecast");
+            $("#forecast").append(forecastRow);
+
+            var dailyForecast = $("<div>").addClass("col-md-12 dailyForecast");
+            forecastRow.append(dailyForecast);
+
+            var cardDeck = $("<div>").addClass("card-deck col s12 m>");
+            dailyForecast.append(cardDeck);
+            
             // Card Day 1
             var day1Card = $("<div>").addClass("card text-white bg-primary mb-3");
             
@@ -97,10 +108,10 @@ $(document).ready(function() {
             var dayOne = $("<div>").addClass("card-header").text(day1Time);
 
             var day1IconUrl = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
-            var day1Icon = $("<img src='" + day1IconUrl + "'>").addClass("card-text").text(day1Icon);
+            var day1Icon = $("<img src='" + day1IconUrl + "'>");
 
             var day1T = (data.list[0].main.temp - 273.15);
-            var day1Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day1T + "°C");
+            var day1Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day1T.toFixed(2) + " °C");
 
             var day1H = (data.list[0].main.humidity);
             var day1Humidity = $("<p>").addClass("card-text p-2").text("Humidity: " + day1H + "%");
@@ -114,10 +125,10 @@ $(document).ready(function() {
             var dayTwo = $("<div>").addClass("card-header").text(day2Time);
 
             var day2IconUrl = "http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png";
-            var day2Icon = $("<img src='" + day2IconUrl + "'>").addClass("card-text").text(day2Icon);
+            var day2Icon = $("<img src='" + day2IconUrl + "'>").addClass("card-text");
 
             var day2T = (data.list[1].main.temp - 273.15);
-            var day2Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day2T + "°C");
+            var day2Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day2T.toFixed(2) + " °C");
 
             var day2H = (data.list[1].main.humidity);
             var day2Humidity = $("<p>").addClass("card-text p-2").text("Humidity: " + day2H + "%");
@@ -131,10 +142,10 @@ $(document).ready(function() {
             var dayThree = $("<div>").addClass("card-header").text(day3Time);
 
             var day3IconUrl = "http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png";
-            var day3Icon = $("<img src='" + day3IconUrl + "'>").addClass("card-text").text(day3Icon);
+            var day3Icon = $("<img src='" + day3IconUrl + "'>").addClass("card-text");
 
             var day3T = (data.list[2].main.temp - 273.15);
-            var day3Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day3T + "°C");
+            var day3Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day3T.toFixed(2) + " °C");
 
             var day3H = (data.list[2].main.humidity);
             var day3Humidity = $("<p>").addClass("card-text p-2").text("Humidity: " + day3H + "%");
@@ -148,10 +159,10 @@ $(document).ready(function() {
             var dayFour = $("<div>").addClass("card-header").text(day4Time);
 
             var day4IconUrl = "http://openweathermap.org/img/w/" + data.list[3].weather[0].icon + ".png";
-            var day4Icon = $("<img src='" + day4IconUrl + "'>").addClass("card-text").text(day4Icon);
+            var day4Icon = $("<img src='" + day4IconUrl + "'>").addClass("card-text");
 
             var day4T = (data.list[3].main.temp - 273.15);
-            var day4Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day4T + "°C");
+            var day4Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day4T.toFixed(2) + " °C");
 
             var day4H = (data.list[3].main.humidity);
             var day4Humidity = $("<p>").addClass("card-text p-2").text("Humidity: " + day4H + "%");
@@ -165,17 +176,17 @@ $(document).ready(function() {
             var dayFive = $("<div>").addClass("card-header").text(day5Time);
 
             var day5IconUrl = "http://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
-            var day5Icon = $("<img src='" + day5IconUrl + "'>").addClass("card-text").text(day5Icon);
+            var day5Icon = $("<img src='" + day5IconUrl + "'>").addClass("card-text");
 
             var day5T = (data.list[4].main.temp - 273.15);
-            var day5Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day5T + "°C");
+            var day5Temp = $("<p>").addClass("card-text p-2").text("Temp: " + day5T.toFixed(2) + " °C");
 
             var day5H = (data.list[4].main.humidity);
             var day5Humidity = $("<p>").addClass("card-text p-2").text("Humidity: " + day5H + "%");
 
             day5Card.append(dayFive, day5Icon, day5Temp, day5Humidity);
             // merge together and put on page
-            $("#forecast").append(day1Card, day2Card, day3Card, day4Card, day5Card);
+            cardDeck.append(day1Card, day2Card, day3Card, day4Card, day5Card);
           }
         }
       }
