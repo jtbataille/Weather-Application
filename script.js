@@ -70,7 +70,7 @@ $(document).ready(function() {
       }
     });
   }
-  
+
   function getForecast(searchValue) {
     $.ajax({
       type: "GET",
@@ -100,6 +100,18 @@ $(document).ready(function() {
 
             var cardDeck = $("<div>").addClass("card-deck col s12 m>");
             dailyForecast.append(cardDeck);
+
+            // Day Cards
+            var day1Card = $("<div>").addClass("card text-white bg-primary mb-3");
+            day1Card.append(dayOne, day1Icon, day1Temp, day1Humidity);
+            var day2Card = $("<div>").addClass("card text-white bg-primary mb-3");
+            day2Card.append(dayTwo, day2Icon, day2Temp, day2Humidity);
+            var day3Card = $("<div>").addClass("card text-white bg-primary mb-3");
+            day3Card.append(dayThree, day3Icon, day3Temp, day3Humidity);
+            var day4Card = $("<div>").addClass("card text-white bg-primary mb-3");
+            day4Card.append(dayFour, day4Icon, day4Temp, day4Humidity);
+            var day5Card = $("<div>").addClass("card text-white bg-primary mb-3");
+            day5Card.append(dayFive, day5Icon, day5Temp, day5Humidity);
             
             // Card Day 1
             var day1Card = $("<div>").addClass("card text-white bg-primary mb-3");
