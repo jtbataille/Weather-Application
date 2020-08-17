@@ -13,7 +13,7 @@ In the 5-Day Forecast, the user will see five cards containing the day associate
 As everything is saved to the Local Storage, the user's past search results are kept in the lefthand column under the Search Input. While each new search will re-write what the user sees to the right (the current day and the 5-Day Forecast), the user may simply click the past searches to retrieve those results and see them again instead of re-typing the search, even upon page re-load.
 
 ## Deployed Website Link:
-https://jtbataille.github.io/Weather-Application/
+! [Find out the weather!] (https://jtbataille.github.io/Weather-Application/)
 
 ## Application Demo:
 ![Weather Dashboard](https://user-images.githubusercontent.com/65187093/89108808-889ce800-d409-11ea-892d-201d936b0440.gif)
