@@ -1,5 +1,14 @@
 # Weather Dashboard
 
+## Table of Contents:
+* [Description](#description)
+* [Technologies Used](#technologies-used)
+* [Initial Usage](#initial-usage)
+* [Continued Usage](#continued-usage)
+* [Application Demo](#application-demo)
+* [Deployed Application Link](#deployed-application-link)
+* [Contact Me](#contact-information)
+
 ## Description:
 
 In this application, a user can search for a city (with a country tag for added specificity [IT, DE, US, etc.]) and receive the current weather for that locality. Moreover, the user will be provided with a 5-Day Forecast below the current day of upcoming weather.
@@ -10,7 +19,7 @@ In this application, a user can search for a city (with a country tag for added 
 * CSS
 * OpenWeatherApp API
 
-## First Usage:
+## Initial Usage:
 Upon opening the application, the user will see a Search Box wherein s/he will introduce the desired location to see the weather, which will bring up two things: the current day and the 5-Day Forecast.
 
 In the current day view, the user can see his/her selected location, including City, Country, as well as the current date (dynamically updated with moment.js), and the icon portraying the weather for that day, updated based on the weather forecasted for 3 PM each day. Below this, the user will see the Temperature in Celsius, the percentage of Humidity, the current Wind Speed in meter(s) per second, and the UV Index. This UV Index is dynamically called based on the user's inputed location, and it will update its color based on the UV Index (green = good, yellow = OK, orange = be weary, red = bad, purple = stay inside).
@@ -23,7 +32,7 @@ As everything is saved to the Local Storage, the user's past search results are 
 ## Application Demo:
 ![Weather Dashboard](https://user-images.githubusercontent.com/65187093/89108808-889ce800-d409-11ea-892d-201d936b0440.gif)
 
-## Deployed Website Link:
+## Deployed Application Link:
 [Find out the weather!](https://jtbataille.github.io/Weather-Application/)
 
 ## Contact Information:
