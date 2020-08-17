@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-## Description
+## Description:
 
 In this application, a user can search for a city (with a country tag for added specificity [IT, DE, US, etc.]) and receive the current weather for that locality. Moreover, the user will be provided with a 5-Day Forecast below the current day of upcoming weather.
 
