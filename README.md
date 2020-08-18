@@ -33,7 +33,7 @@ As everything is saved to the Local Storage, the user's past search results are 
 ![Weather Dashboard](https://user-images.githubusercontent.com/65187093/89108808-889ce800-d409-11ea-892d-201d936b0440.gif)
 
 ## Deployed Application Link
-[Find out the weather!](https://jtbataille.github.io/Weather-Application/)
+[Click here to discover a world of weather!](https://jtbataille.github.io/Weather-Application/)
 
 ## Contact Information
 * E-mail: jtbataille@gmail.com
