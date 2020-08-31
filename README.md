@@ -1,4 +1,5 @@
 # Weather Dashboard
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Table of Contents
 * [Description](#description)
@@ -14,10 +15,7 @@
 In this application, a user can search for a city (with a country tag for added specificity [IT, DE, US, etc.]) and receive the current weather for that locality. Moreover, the user will be provided with a 5-Day Forecast below the current day of upcoming weather.
 
 ## Technologies Used
-* JavaScript
-* HTML
-* CSS
-* OpenWeatherApp API
+HTML, CSS, JavaScript, OpenWeatherApp API
 
 ## Initial Usage
 Upon opening the application, the user will see a Search Box wherein s/he will introduce the desired location to see the weather, which will bring up two things: the current day and the 5-Day Forecast.
@@ -36,5 +34,10 @@ As everything is saved to the Local Storage, the user's past search results are 
 [Click here to discover a world of weather!](https://jtbataille.github.io/Weather-Application/)
 
 ## Contact Information
-* E-mail: jtbataille@gmail.com
-* Portfolio: https://jtbataille.github.io/
+* Jarrod Bataille
+  * Portfolio Webpage: https://jtbataille.github.io/
+  * GitHub Profile: https://github.com/jtbataille
+  * E-mail Address: jtbataille@gmail.com
+
+- - -
+Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>
